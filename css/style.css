@@ -59,7 +59,7 @@ header {
   padding: 24px 0;
 }
 .logo img {
-  width: 75px;
+  width: 50px;
 }
 .navbar {
   display: flex;
@@ -68,7 +68,7 @@ header {
   gap: 1rem;
 }
 .nav-link {
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: var(--bg-color);
   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -121,6 +121,7 @@ header {
   position: relative;
   padding: 7rem 0 2rem;
 }
+
 .home-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -138,14 +139,14 @@ header {
   font-weight: 800;
 }
 .home-text p {
-  font-size: 1.025rem;
+  font-size: 1.5rem;
   margin: 2rem 0 1rem;
 }
 .home-text h3 {
-  font-size: 2.7rem;
+  font-size: 1.5rem;
   line-height: 2.7rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 .btn {
   max-width: 200px;
@@ -187,58 +188,12 @@ header {
   object-fit: cover;
   object-position: center center;
 }
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 310px));
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 2rem 0;
-  border-bottom: 1px solid rgb(18 18 18 / 20%);
-}
-.feature-box {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.feature-img {
-  width: 50px;
-}
-.feature-text h3 {
-  font-size: 1.4rem;
-  font-weight: 500;
-}
 .heading {
   font-size: 3.5rem;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   text-align: center;
   margin-bottom: 2rem !important;
-}
-.feature-menu-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 180px));
-  justify-content: space-between;
-  gap: 1rem;
-}
-.feature-menu-box {
-  text-align: center;
-}
-.feature-menu-box img {
-  max-width: 185px;
-  width: 100%;
-  cursor: pointer;
-  transition: transform 0.5s ease;
-}
-.feature-menu-box img:hover {
-  transform: scale(1.1);
-  transition: transform 0.5s ease;
-}
-.feature-menu-box h3 {
-  font-family: "Poppins", sans-serif;
-}
-.feature-menu-box p {
-  color: var(--text-color);
-  opacity: 0.7;
 }
 .items {
   background: var(--container-color);
@@ -544,13 +499,6 @@ header {
     width: 90%;
     margin: 0 auto;
   }
-  .features {
-    border-bottom: none;
-  }
-  .feature-box {
-    border-bottom: 1px solid rgb(18 18 18 / 20%);
-    padding-bottom: 12px;
-  }
 }
 @media (max-width: 1195px) {
   .home-text h1 {
@@ -558,11 +506,12 @@ header {
     line-height: 4.8rem;
   }
   .home-text h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 400;
+    font-weight: 600;
   }
 }
+
 @media (max-width: 975px) {
   .heading {
     font-size: 2.8rem;
@@ -573,6 +522,9 @@ header {
   .menu-content,
   .testimonials-content {
     grid-template-columns: 1fr;
+  }
+  .menu-container h2 {
+    font-size: 2rem;
   }
   .menu-box h2 {
     font-size: 1.7rem;
@@ -603,7 +555,8 @@ header {
     right: 0;
     width: 320px;
     height: 100vh;
-    background: var(--red);
+    background: var(--text-color);
+    color: var(--red);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -648,13 +601,11 @@ header {
     margin: 1rem 0;
   }
 }
+
 @media (max-width: 670px) {
   .home-text h1 {
     font-size: 2.7rem;
     line-height: 3.2rem;
-  }
-  .features {
-    justify-content: center;
   }
   .item-content {
     grid-template-columns: repeat(2, 1fr);
@@ -664,14 +615,13 @@ header {
     grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 390px) {
   .navbar {
-    width: 100%;
-  }
-  .feature-menu-content {
-    justify-content: center;
+    width: 80%;
   }
   .menu-box h2 {
+    font-size: 1.4rem;
     text-align: center;
   }
   .m-item-right {
