@@ -13,6 +13,12 @@ window.onscroll = () => {
   navbar.classList.remove("open-menu");
 };
 
+// Scrolled
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 50); // Ajuste o valor conforme necessário
+});
+
 // ScrollReveal
 const animate = ScrollReveal({
   origin: "top",

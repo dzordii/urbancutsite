@@ -1,5 +1,6 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Righteous&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
 
 * {
   margin: 0;
@@ -11,7 +12,7 @@
 }
 /* Variables */
 :root {
-  --text-color: #121212;
+  --text-color: #000000;
   --container-color: #efe8e0;
   --red: #b22617;
   --bg-color: #fff;
@@ -50,7 +51,12 @@ header {
   left: 0;
   width: 100%;
   background: var(--red);
+  box-shadow: rgba(100, 100, 111, 0.322) 0px 7px 29px 0px;
   z-index: 100;
+}
+header.scrolled {
+  background-color: #000; /* Altere a cor para preto */
+  box-shadow: rgba(255, 255, 255, 0.199) 0px 7px 29px 0px;
 }
 .nav {
   display: flex;
@@ -133,8 +139,8 @@ header {
   z-index: 4;
 }
 .home-text h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 6.2rem;
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
   line-height: 6.8rem;
   font-weight: 800;
 }
@@ -143,9 +149,9 @@ header {
   margin: 2rem 0 1rem;
 }
 .home-text h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-size: 1.5rem;
-  line-height: 2.7rem;
-  font-weight: 600;
   margin-bottom: 1rem;
 }
 .btn {
@@ -263,6 +269,13 @@ header {
   color: var(--bg-color);
   transition: background 0.4s ease-in-out;
 }
+.menu-container-2 {
+  background: var(--text-color);
+  color: var(--bg-color);
+  position: relative;
+  padding: 4rem 0;
+  margin-top: 4rem;
+}
 .menu-container {
   background: var(--text-color);
   color: var(--bg-color);
@@ -310,7 +323,7 @@ header {
   border-bottom: 1px dashed #ffffff7c;
 }
 .m-item-box img {
-  max-width: 82px;
+  max-width: 600px;
   border-radius: 10px;
 }
 .m-item-right {
@@ -355,7 +368,7 @@ header {
   border-radius: 10px;
 }
 .t-box .stars {
-  color: var(--yellow-color);
+  color: rgb(224, 194, 21);
   font-size: 18px;
 }
 .t-box p {
@@ -434,66 +447,74 @@ header {
   color: var(--bg-color);
   transition: 0.4s ease-in-out;
 }
+/* Estilo principal do rodapé */
 .footer {
-  background: var(--text-color);
-  color: var(--bg-color);
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  justify-content: center;
 }
+
+/* Layout do conteúdo do rodapé */
 .footer-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  padding: 40px 0 30px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.footer-logo {
-  margin-bottom: 10px;
-}
+
+/* Logo */
 .footer-logo img {
-  width: 80px;
+  width: 100px;
+  margin-bottom: 15px;
 }
-.footer-box {
-  display: flex;
-  flex-direction: column;
+
+/* Títulos das seções */
+.footer-box h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #fff;
 }
-.social {
+
+/* Links e texto nas seções */
+.footer-box a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-box p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+/* Redes sociais e localização */
+.social a {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
-}
-.social a .bx {
-  font-size: 20px;
-  background: var(--yellow-color);
-  color: var(--bg-color);
-  border-radius: 50%;
-  padding: 8px;
-  margin-right: 0.8rem;
-}
-.social a .bx:hover {
-  color: var(--text-color);
-  background: var(--bg-color);
-  transition: background 0.4s ease-in-out;
-}
-.footer-box h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--bg-color);
-  margin-bottom: 1rem;
-}
-.footer-box p {
-  margin-bottom: 8px;
-}
-.footer-box p Span {
-  display: inline-block;
-  width: 50px;
-}
-.footer-box a {
-  color: var(--bg-color);
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
   margin-bottom: 10px;
 }
-.copyright {
-  padding: 30px;
-  color: var(--bg-color);
-  text-align: center;
+.social i {
+  font-size: 18px;
 }
+/* Copyright */
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ccc;
+}
+
 /* Making Responsive */
 @media (max-width: 1410px) {
   .container {
@@ -588,7 +609,7 @@ header {
     margin: 1rem 0;
   }
   .btn {
-    padding: 14px 24px;
+    padding: 16px 24px;
   }
   .item-content {
     text-align: center;
