@@ -126,6 +126,7 @@ header.scrolled {
   background: var(--red);
   position: relative;
   padding: 7rem 0 2rem;
+  margin-top: 1rem;
 }
 
 .home-content {
@@ -155,7 +156,8 @@ header.scrolled {
   margin-bottom: 1rem;
 }
 .btn {
-  max-width: 200px;
+  width: 180px; /* Defina a largura absoluta */
+  height: 80px; /* Defina a altura absoluta */
   padding: 15px 10px;
   margin-bottom: 5px;
   display: flex;
