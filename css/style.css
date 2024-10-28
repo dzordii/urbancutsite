@@ -8,7 +8,8 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
   scroll-padding-top: 3rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Anton';
+  letter-spacing: 0.5px;
 }
 /* Variables */
 :root {
@@ -168,8 +169,9 @@ header.scrolled {
   margin: 2rem 0 1rem;
 }
 .home-text h3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-family: 'Anton';
+  font-weight: 200;
+  letter-spacing: 0.5px;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -185,7 +187,7 @@ header.scrolled {
   background: #ffff;
   color: #121212;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Anton';
   font-weight: 600;
 }
 .btn:hover {
@@ -233,6 +235,8 @@ header.scrolled {
 }
 .t-box p {
   font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
   margin: 10px 0;
 }
 .profile {
@@ -248,10 +252,10 @@ header.scrolled {
   object-fit: cover;
 }
 .profile-data h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Anton';
   font-size: 1rem;
   line-height: 1rem;
-  font-weight: 600;
+  font-weight: 200;
 }
 .profile-data span {
   font-size: 0.94rem;
@@ -267,7 +271,8 @@ header.scrolled {
   background-color: #000;
   color: #fff;
   padding: 40px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Anton';
+  font-weight: 200;
   justify-content: center;
 }
 
@@ -289,6 +294,7 @@ header.scrolled {
 /* Títulos das seções */
 .footer-box h3 {
   font-size: 16px;
+  font-weight: 100;
   margin-bottom: 15px;
   text-transform: uppercase;
   color: #fff;
@@ -359,7 +365,7 @@ iframe {
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Anton';
   animation: slideIn 0.5s ease-in-out;
   animation: pulse 1.5s infinite; /* Animação de pulsar */
   z-index: 1000;
@@ -519,14 +525,15 @@ iframe {
 .service-description p {
   margin: 5px 0 0;
   font-size: 0.9em;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+  font-family: 'Anton';
+  font-weight: 200;
 }
 
 /* Preço do serviço */
 .service-price h3 {
   margin: 0;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
-  font-weight: 800;
+  font-family: 'Chewy';
+  font-weight: 200;
   font-size: 1.3em;
   text-align: right;
   font-weight: bold;
