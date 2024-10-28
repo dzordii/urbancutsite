@@ -79,7 +79,7 @@ header.scrolled {
   gap: 1rem;
 }
 .nav-link {
-  font-family: "DynaPuff", system-ui;
+  font-family: 'Chewy';
   font-size: 1rem;
   color: var(--bg-color);
   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -157,7 +157,7 @@ header.scrolled {
   z-index: 4;
 }
 .home-text h1 {
-  font-family: "DynaPuff", system-ui;
+  font-family: 'Chewy';
   font-optical-sizing: auto;
   line-height: 5.8rem;
   font-size: 6rem;
@@ -210,7 +210,7 @@ header.scrolled {
 /*/////////////////////////////////*/
 .heading {
   padding-bottom: 2rem;
-  font-family: "DynaPuff", system-ui;
+  font-family: 'Chewy';
   font-size: 4rem !important;
   text-align: center;
 }
@@ -448,7 +448,7 @@ iframe {
 
 .services-section h2 {
   padding-bottom: 4rem;
-  font-family: "DynaPuff", system-ui;
+  font-family: 'Chewy';
   font-size: 4rem !important;
 }
 
@@ -511,7 +511,7 @@ iframe {
 /* Descrição do serviço */
 .service-description h3 {
   margin: 0;
-  font-family: "DynaPuff", system-ui;
+  font-family: 'Chewy';
   font-weight: 200;
   font-size: 1.2em;
 }
