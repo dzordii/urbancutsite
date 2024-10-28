@@ -36,3 +36,8 @@ animate.reveal(
     interval: 100,
   }
 );
+
+  // Função para abrir o WhatsApp ao clicar no pop-up
+  document.getElementById("whatsappPopup").onclick = function() {
+    window.open("https://wa.me/555196100769", "_blank");
+  };
