@@ -208,10 +208,18 @@ header.scrolled {
 /* /////////// SESSÃO DE AVALIAÇÕES ///////////*/
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
+.heading {
+  padding-bottom: 2rem;
+  font-family: "DynaPuff", system-ui;
+  font-size: 4rem !important;
+  text-align: center;
+}
+
 .testimonials-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  padding: 2rem;
 }
 .t-box {
   background: rgb(255, 255, 255);
@@ -415,8 +423,16 @@ iframe {
 /*/////////////////////////////////*/
 .services-section {
   padding: 20px;
+  padding-top: 200px;
+  padding-bottom: 100px;
   background-color: #000; /* Cor de fundo */
   color: white;
+}
+
+.services-section h2 {
+  padding-bottom: 4rem;
+  font-family: "DynaPuff", system-ui;
+  font-size: 4rem !important;
 }
 
 .services-section .section-title {
@@ -425,39 +441,39 @@ iframe {
   margin-bottom: 20px;
   color: #ffffff;
 }
-
-/* Container para os serviços */
 .services-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
+  gap: 20px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens na tela */
 }
 
 .service-column {
-  flex: 1;
-  min-width: 300px; /* Largura mínima de cada box de serviços */
-  max-width: 500px;
+  flex: 1 1 45%; /* Define um tamanho base mínimo para cada item e permite que eles cresçam */
+  min-width: 300px; /* Define uma largura mínima para evitar que fiquem pequenos demais */
+  max-width: 40%; /* Garante que cada item não ultrapasse a largura total */
+  box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no tamanho total */
 }
 
-/* Estilo de cada item de serviço */
 .service-item {
   position: relative;
+  width: 100%; /* Faz com que cada item ocupe toda a largura do .service-column */
+  height: 250px; /* Define uma altura fixa maior para dar a aparência retangular */
   overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+  border: 2px solid #ff0000; /* Exemplo para destacar os itens, remova se não for necessário */
 }
 
-/* Imagem do serviço */
 .service-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* Ocupa toda a largura do item */
+  height: 100%; /* Ocupa toda a altura do item */
+  object-fit: cover; /* Garante que a imagem ocupe o espaço sem distorções */
   transition: transform 0.3s ease;
 }
 
 .service-item:hover img {
-  transform: scale(1.1); /* Efeito de zoom na imagem ao passar o mouse */
+  transform: scale(1.1);
 }
 
 /* Sobreposição de texto */
@@ -478,22 +494,26 @@ iframe {
 /* Descrição do serviço */
 .service-description h3 {
   margin: 0;
+  font-family: "DynaPuff", system-ui;
+  font-weight: 200;
   font-size: 1.2em;
 }
 
 .service-description p {
   margin: 5px 0 0;
   font-size: 0.9em;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
 }
 
 /* Preço do serviço */
 .service-price h3 {
   margin: 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+  font-weight: 800;
   font-size: 1.3em;
-  font-weight: 500;
   text-align: right;
   font-weight: bold;
-  color: #ffd700; /* Cor do preço */
+  color: #ffffff; /* Cor do preço */
 }
 
 /*/////////////////////////////////*/
