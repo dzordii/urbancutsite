@@ -219,6 +219,130 @@ header.scrolled {
 
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
+/* /////////// CLUBE ///////////*/
+/*/////////////////////////////////*/
+/*/////////////////////////////////*/
+.home2 {
+  min-height: 100vh; /* A altura mínima se adapta à altura da tela */
+  background-image: url('/images/pensar.png');
+  background-size: cover; /* A imagem cobre todo o contêiner */
+  background-position: center; /* Centraliza a imagem no contêiner */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  position: relative;
+  padding: 15rem;
+  margin-top: 7rem;  
+  display: flex; /* Adicionando flexbox */
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+.home2-content {
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo em coluna */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.home2-title {
+  color: white;
+  font-size: 2.6rem;
+}
+
+.btn2-container {
+  width: 100%; /* Faz o container ocupar toda a largura disponível */
+  display: flex; /* Flexbox para alinhar o botão */
+  justify-content: flex-start; /* Alinha o botão à esquerda */
+  padding-top: 20px; /* Espaço acima do botão */
+}
+
+.btn2 {
+  width: 180px; /* Largura fixa do botão */
+  height: 80px; /* Altura fixa do botão */
+  padding: 15px 10px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #070707;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Anton';
+  font-weight: 400;
+  font-size: 25px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  .home2-title {
+      font-size: 2rem; /* Reduzindo o tamanho da fonte em telas menores */
+  }
+
+  .btn2 {
+      width: 150px; /* Ajustando a largura do botão */
+      height: 60px; /* Ajustando a altura do botão */
+      font-size: 20px; /* Ajustando o tamanho da fonte do botão */
+  }
+}
+
+@media (max-width: 480px) {
+  .home2 {
+      padding: 5rem 1rem; /* Reduzindo o padding em telas pequenas */
+  }
+
+  .home2-title {
+      font-size: 1.8rem; /* Reduzindo ainda mais o tamanho da fonte */
+  }
+
+  .btn2 {
+      width: 120px; /* Ajustando para telas muito pequenas */
+      height: 50px; /* Ajustando para telas muito pequenas */
+      font-size: 18px; /* Ajustando para telas muito pequenas */
+  }
+}
+
+/*/////////////////////////////////*/
+/* PAGINA 1 DO CLUBE*/
+/*/////////////////////////////////*/
+.page1 {
+  min-height: 400px;
+  position: relative;
+  padding: 7rem;
+}
+.page1-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.page1-title {
+  color: white;
+  font-size: 2.6rem;
+  padding-top: 3rem;
+}
+/*/////////////////////////////////*/
+/* PAGINA 2 DO CLUBE*/
+/*/////////////////////////////////*/
+.page2 {
+  min-height: 900px;
+  height: 100vh; /* Ajusta a altura da seção para ocupar toda a tela */
+  background-image: url('/images/page2.png');
+  background-size: cover; /* Faz a imagem preencher todo o contêiner */
+  background-position: center; /* Centraliza a imagem no contêiner */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  position: relative;
+  padding: 7rem;
+}
+.page2-content {
+  display: flex;
+  justify-content: right;
+}
+.page2-title {
+  color: white;
+  font-size: 1.5rem;
+}
+/*/////////////////////////////////*/
+/*/////////////////////////////////*/
 /* /////////// SESSÃO DE AVALIAÇÕES ///////////*/
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
