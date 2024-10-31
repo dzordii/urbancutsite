@@ -21,7 +21,7 @@
 }
 body {
   color: var(--text-color);
-  background: var(--bg-color);
+  background: black;
 }
 /* Custom Scroll Bar */
 html::-webkit-scrollbar {
@@ -85,6 +85,17 @@ header.scrolled {
   color: var(--bg-color);
   transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.nav-link2 {
+  font-family: 'Chewy';
+  font-size: 1.2rem;
+  color: black;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .nav-link:hover {
   color: var(--red);
   background-color: var(--bg-color);
@@ -132,7 +143,6 @@ header.scrolled {
 .move .line3 {
   transform: rotate(45deg) translate(-5px, -5px);
 }
-
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
 /* /////////// HOME SECTION ///////////*/
@@ -211,10 +221,11 @@ header.scrolled {
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
 .heading {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   font-family: 'Chewy';
   font-size: 4rem !important;
   text-align: center;
+  color: white;
 }
 
 .testimonials-content {
@@ -268,8 +279,8 @@ header.scrolled {
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
 .footer {
-  background-color: #000;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   padding: 40px 0;
   font-family: 'Anton';
   font-weight: 100;
@@ -297,13 +308,13 @@ header.scrolled {
   font-weight: 100;
   margin-bottom: 15px;
   text-transform: uppercase;
-  color: #fff;
+  color: #000000;
 }
 
 /* Links e texto nas seções */
 .footer-box a {
   display: block;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   margin-bottom: 8px;
   font-size: 14px;
@@ -312,7 +323,7 @@ header.scrolled {
 .footer-box p {
   font-size: 14px;
   margin-bottom: 8px;
-  color: #ccc;
+  color: #000000;
 }
 
 iframe {
@@ -329,12 +340,13 @@ iframe {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #fff;
+  color: #000000;
   font-size: 14px;
   text-decoration: none;
   margin-bottom: 10px;
 }
 .social i {
+  color: #000000;
   font-size: 18px;
 }
 /* Copyright */
@@ -342,7 +354,7 @@ iframe {
   text-align: center;
   margin-top: 20px;
   font-size: 12px;
-  color: #ccc;
+  color: #000000;
 }
 
 /*/////////////////////////////////*/
@@ -444,64 +456,95 @@ iframe {
 /* /////////// SESSÃO DOS SERVIÇOS ///////////*/
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
-.services-section {
+.services-title {
+  color: white;
+  background: black;
+  padding-top: 60px;
+  margin: 0;
+  font-size: 4rem; /* Espaçamento entre o título e o carrossel */
+  font-family: 'Chewy';
+  font-weight: 300;
   text-align: center;
 }
 
-.carousel {
-  position: relative;
-  overflow: hidden;
-  width: 80%;
-  margin: 0 auto;
+.services-section {
   display: flex;
+  padding: 0 35px;
+  margin: 0;
   align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background-color: black;
 }
 
-.carousel-track-container {
-  overflow: hidden;
-  width: 100%;
+.wrapper {
+  max-width: 1200px;
+  position: relative;
 }
 
-.carousel-track {
-  display: flex;
-  gap: 10px;
-  transition: transform 0.5s ease;
-}
-
-.carousel-slide {
-  flex: 0 0 25%; /* Ocupa 25% da largura do contêiner */
-  transition: transform 0.3s ease;
-}
-
-.carousel-slide img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-  cursor: pointer; /* Aponta que as imagens são clicáveis */
-}
-
-/* Botões de navegação */
-.carousel-button {
-  position: absolute;
-  font-size: 30px;
-  color: #00000038;
-  background-color: transparent;
+.wrapper i {
   top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  padding: 10px;
+  height: 46px;
+  width: 46px;
   cursor: pointer;
-  z-index: 1;
-}
-.carousel-button:hover {
-  color: white;
-}
-.carousel-button--left {
-  left: 10px;
+  position: absolute;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 46px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
-.carousel-button--right {
-  right: 10px;
+.wrapper i:first-child {
+  left: -23px;
+  display: none;
+}
+
+.wrapper i:last-child {
+  right: -23px;
+}
+
+
+.wrapper .carousel {
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+  cursor: grap;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 340px;
+  object-fit: cover;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img {
+    width: calc(100% /2);
+  }
+}
+@media screen and (max-width: 550px) {
+  .carousel img {
+    width: 100%;
+  }
+  .services-title  {
+    font-size: 2rem;
+  }
 }
 
 /*/////////////////////////////////*/

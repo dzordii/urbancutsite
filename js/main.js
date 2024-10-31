@@ -47,91 +47,57 @@ document.getElementById("whatsappPopup").onclick = function () {
 // 
 // 
 //
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel-button--right');
-const prevButton = document.querySelector('.carousel-button--left');
+const carousel = document.querySelector(".carousel"),
+firstImg = carousel.querySelectorAll("img") [0]
+arrowIcons = document.querySelectorAll(".wrapper i")
 
-let currentIndex = Math.floor(slides.length / 2);
-let isDragging = false;
-let startX, currentX;
+let isDragStart = false, prevPageX, prevScrollLeft, positionDiff
 
-function updateSlidePosition() {
-  const slideWidth = slides[0].getBoundingClientRect().width + 10; // incluindo o gap de 10px
-  const offset = currentIndex - Math.floor(slides.length / 2);
-  track.style.transform = `translateX(-${offset * slideWidth}px)`;
-
-  // Marca a imagem central e adiciona a classe 'center'
-  slides.forEach((slide, index) => {
-    slide.classList.toggle('center', index === currentIndex);
-  });
-
-  // Desativa o botão "anterior" se estiver no primeiro slide
-  prevButton.disabled = currentIndex === 0;
-
-  // Desativa o botão "próximo" se estiver no último slide
-  nextButton.disabled = currentIndex === slides.length - 1;
+const showHideIcons = () => {
+  let scrollWidth = carousel.scrollWidth - carousel.clientWidth
+  arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block"
+  arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block"
 }
 
-// Botão "próximo"
-nextButton.addEventListener('click', () => {
-  if (currentIndex < slides.length - 1) {
-    currentIndex += 1;
-    updateSlidePosition();
-  }
-});
+arrowIcons.forEach(icon => {
+  icon.addEventListener("click", () => {
+    let firstImgWidth = firstImg.clientWidth + 14
+    carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth
+    setTimeout(() => showHideIcons(), 60) 
+  })
+})
 
-// Botão "anterior"
-prevButton.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex -= 1;
-    updateSlidePosition();
-  }
-});
-
-// Habilitar arrastar para navegar no mobile
-slides.forEach((slide) => {
-  slide.addEventListener('mousedown', startDragging);
-  slide.addEventListener('mouseup', stopDragging);
-  slide.addEventListener('mouseleave', stopDragging);
-  slide.addEventListener('touchstart', startDragging);
-  slide.addEventListener('touchend', stopDragging);
-  slide.addEventListener('touchmove', drag);
-});
-
-function startDragging(event) {
-  isDragging = true;
-  startX = event.type === 'mousedown' ? event.pageX : event.touches[0].pageX;
-  currentX = startX;
+const autoSlide = () => {
+  positionDiff = Math.abs(positionDiff)
 }
 
-function stopDragging() {
-  isDragging = false;
+const dragStart = (e) => {
+  isDragStart = true
+  prevPageX = e.pageX || e.touches[0].pageX
+  prevScrollLeft = carousel.scrollLeft
 }
 
-function drag(event) {
-  if (!isDragging) return;
-
-  const x = event.type === 'mousemove' ? event.pageX : event.touches[0].pageX;
-  const distance = x - currentX;
-
-  // Desliza para a esquerda ou direita
-  if (distance > 50) { // Ajuste o valor 50 conforme necessário para sensibilidade
-    if (currentIndex > 0) {
-      currentIndex -= 1;
-      updateSlidePosition();
-    }
-    currentX = x; // Reseta a posição inicial para o próximo movimento
-  } else if (distance < -50) {
-    if (currentIndex < slides.length - 1) {
-      currentIndex += 1;
-      updateSlidePosition();
-    }
-    currentX = x; // Reseta a posição inicial para o próximo movimento
-  }
+const dragging = (e) => {
+  if(!isDragStart) return
+  e.preventDefault()
+  carousel.classList.add("dragging")
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX
+  carousel.scrollLeft = prevScrollLeft - positionDiff
+  showHideIcons()
 }
 
-// Ajusta a posição do slide central ao redimensionar a janela
-window.addEventListener('resize', updateSlidePosition);
-updateSlidePosition();
+const dragStop = () => {
+  isDragStart = false
+  carousel.classList.remove("dragging")
+  autoSlide()
+}
 
+carousel.addEventListener("mousedown", dragStart)
+carousel.addEventListener("touchstart", dragStart)
+
+carousel.addEventListener("mousemove", dragging)
+carousel.addEventListener("touchmove", dragging)
+
+carousel.addEventListener("mouseup", dragStop)
+carousel.addEventListener("mouseleave", dragStop)
+carousel.addEventListener("touchend", dragStop)
