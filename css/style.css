@@ -154,7 +154,7 @@ header.scrolled {
   background-attachment: fixed;
   position: relative;
   padding: 7rem 0 2rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .home-content {
@@ -180,8 +180,8 @@ header.scrolled {
 }
 .home-text h3 {
   font-family: 'Anton';
-  font-weight: 200;
-  letter-spacing: 0.5px;
+  font-weight: 400;
+  letter-spacing: 1px;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -198,7 +198,9 @@ header.scrolled {
   color: #121212;
   cursor: pointer;
   font-family: 'Anton';
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 25px;
+  animation: pulse 1.5s infinite; /* Animação de pulsar */
 }
 .btn:hover {
   background: rgb(255, 255, 255);
@@ -220,12 +222,21 @@ header.scrolled {
 /* /////////// SESSÃO DE AVALIAÇÕES ///////////*/
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
+.testimonials {
+  background: rgb(255, 255, 255);
+}
+
 .heading {
-  padding-bottom: 3rem;
-  font-family: 'Chewy';
-  font-size: 4rem !important;
   text-align: center;
-  color: white;
+  color: black;
+}
+
+.testimonials h2 {
+  padding-bottom: 0.5rem;
+  font-family: 'Chewy';
+  font-size: 4rem;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 .testimonials-content {
@@ -279,11 +290,11 @@ header.scrolled {
 /*/////////////////////////////////*/
 /*/////////////////////////////////*/
 .footer {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   padding: 40px 0;
   font-family: 'Anton';
-  font-weight: 100;
+  font-weight: 400;
   justify-content: center;
 }
 
@@ -304,17 +315,17 @@ header.scrolled {
 
 /* Títulos das seções */
 .footer-box h3 {
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 26px;
+  font-weight: 400;
   margin-bottom: 15px;
   text-transform: uppercase;
-  color: #000000;
+  color: #ffffff;
 }
 
 /* Links e texto nas seções */
 .footer-box a {
   display: block;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   margin-bottom: 8px;
   font-size: 14px;
@@ -323,7 +334,7 @@ header.scrolled {
 .footer-box p {
   font-size: 14px;
   margin-bottom: 8px;
-  color: #000000;
+  color: #ffffff;
 }
 
 iframe {
@@ -340,21 +351,23 @@ iframe {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #000000;
+  color: #ffffff;
   font-size: 14px;
   text-decoration: none;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 .social i {
-  color: #000000;
+  color: #ffffff;
   font-size: 18px;
 }
 /* Copyright */
 .copyright {
   text-align: center;
   margin-top: 20px;
+  font-weight: 400;
   font-size: 12px;
-  color: #000000;
+  color: #ffffff;
 }
 
 /*/////////////////////////////////*/
@@ -459,12 +472,15 @@ iframe {
 .services-title {
   color: white;
   background: black;
-  padding-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 1rem;
   margin: 0;
-  font-size: 4rem; /* Espaçamento entre o título e o carrossel */
+  font-size: 3rem; /* Espaçamento entre o título e o carrossel */
   font-family: 'Chewy';
   font-weight: 300;
   text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .services-section {
@@ -483,7 +499,7 @@ iframe {
 }
 
 .wrapper i {
-  top: 50%;
+  top: 45%;
   height: 46px;
   width: 46px;
   cursor: pointer;
@@ -508,15 +524,15 @@ iframe {
 
 .wrapper .carousel {
   font-size: 0px;
+  padding-bottom: 4rem;
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 .carousel.dragging {
   cursor: grap;
-  scroll-behavior: auto;
 }
 
 .carousel.dragging img {
@@ -528,6 +544,7 @@ iframe {
   object-fit: cover;
   margin-left: 14px;
   width: calc(100% / 3);
+  box-shadow: rgba(255, 255, 255, 0.301) 0px 7px 29px 0px;
 }
 .carousel img:first-child {
   margin-left: 0px;
@@ -566,7 +583,7 @@ iframe {
   .home-text h3 {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 600;
+    font-weight: 400;
   }
 }
 
@@ -662,6 +679,10 @@ iframe {
 }
 
 @media (max-width: 670px) {
+
+  .home {
+    margin-top: 50px;
+  }
   .home-text h1 {
     font-size: 2.7rem;
     line-height: 3.2rem;
