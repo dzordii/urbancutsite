@@ -165,7 +165,8 @@ header.scrolled {
   color: var(--bg-color);
 }
 .home-text {
-  z-index: 4;
+  z-index: 4;  
+  text-align: center;
 }
 .home-text h1 {
   font-family: 'Chewy';
@@ -173,10 +174,6 @@ header.scrolled {
   line-height: 5.8rem;
   font-size: 6rem;
   font-weight: 800;
-}
-.home-text p {
-  font-size: 1.5rem;
-  margin: 2rem 0 1rem;
 }
 .home-text h3 {
   font-family: 'Anton';
@@ -186,8 +183,8 @@ header.scrolled {
   margin-bottom: 1rem;
 }
 .btn {
-  width: 180px; /* Defina a largura absoluta */
-  height: 80px; /* Defina a altura absoluta */
+  width: 180px; /* Largura fixa */
+  height: 80px; /* Altura fixa */
   padding: 15px 10px;
   margin-bottom: 5px;
   display: flex;
@@ -201,6 +198,8 @@ header.scrolled {
   font-weight: 400;
   font-size: 25px;
   animation: pulse 1.5s infinite; /* Animação de pulsar */
+  margin-left: auto; /* Centraliza no mobile */
+  margin-right: auto;
 }
 .btn:hover {
   background: rgb(255, 255, 255);
@@ -705,7 +704,7 @@ iframe {
     line-height: 4.8rem;
   }
   .home-text h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2rem;
     font-weight: 400;
   }
