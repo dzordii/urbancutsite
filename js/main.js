@@ -31,7 +31,7 @@ animate.reveal(".home-text", { origin: "left" });
 animate.reveal(".home-img", { origin: "bottom" });
 animate.reveal(".heading,.newsletter h2", { origin: "top" });
 animate.reveal(
-  "header,.feature-box,.feature-menu-box,.item-box,.m-item-box,.t-box,.newsletter",
+  "header,.feature-box,.feature-menu-box,.item-box,.m-item-box,.t-box,.newsletter, .services-section, .menu-container, .services-title ",
   {
     interval: 100,
   }
